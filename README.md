@@ -17,7 +17,7 @@ This is a GUI based desktop application developed using Java-Swing and Oracle Da
 
 1)Paste the DMP(Crash Dump File) "QUIZAPP.dmp" in the oracle's bin folder its path may be like "D:\Oracle\app\oracle\product\11.2.0\server\bin" .
 
-2)Run Oracle SQL command line and create a user named "quizapp" and password "quizapp"(later on can be changed through app) [steps are shown in the image : ]
+2)Run Oracle SQL command line and create a user named "quizapp" and password "quizapp"(later on can be changed through app) [steps are shown in the image : https://github.com/Sandarbh1910/QUIZAPP-PROJECT/blob/master/Importing%20Steps%20on%20Oracle%20SQL%20Command%20Line%20.png ]
 
 3)Then reach the oracle's bin folder through command prompt  and import the dmp file [steps are shown in image : https://github.com/Sandarbh1910/QUIZAPP-PROJECT/blob/master/Importing%20Steps%20on%20Command%20Prompt.png].
 
