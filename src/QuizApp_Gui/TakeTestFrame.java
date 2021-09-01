@@ -96,16 +96,16 @@ public class TakeTestFrame extends javax.swing.JFrame {
        String str=ans.getChoosenAnswer();
        switch(str)
          {
-           case"Option1":
+               case"Option1":case"option1":
                rbOption1.setSelected(true);
                break;
-               case"Option2":
+               case"Option2":case"option2":
                rbOption2.setSelected(true);
                break;
-               case"Option3":
+               case"Option3":case"option3":
                rbOption3.setSelected(true);
                break;
-               case"Option4":
+               case"Option4":case"option4":
                rbOption4.setSelected(true);
                break;
                
@@ -401,6 +401,7 @@ public class TakeTestFrame extends javax.swing.JFrame {
         String choosenAnswer=getUserAnswer();
         if(choosenAnswer!=null)
         {
+            
             Question quest=qstore.getQuestionByQno(qno);
             String correctAnswer=quest.getCorrectAnswer();
             Answer ans=new Answer(exam.getExamId(),exam.getSubject(),qno,correctAnswer,choosenAnswer);

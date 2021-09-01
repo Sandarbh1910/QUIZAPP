@@ -77,4 +77,23 @@ public class QuestionDAO {
         return questionList;
     }
     
+    
+    public static void updateQuestions(QuestionStore qstore)throws SQLException{
+        Connection conn=DBConnection.getConnection();
+        PreparedStatement ps=conn.prepareStatement("Update question set question=?, option1=?, option2=?, option3=?, option4=?, correct_answer=? where examid=? and question_no=?");
+        ArrayList<Question> questionList=qstore.getAllQuestions();
+        for(Question q:questionList){
+            ps.setString(1,q.getQuestion());
+            ps.setString(2,q.getOption1());
+            ps.setString(3,q.getOption2());
+            ps.setString(4,q.getOption3());
+            ps.setString(5,q.getOption4());
+            ps.setString(6,q.getCorrectAnswer());
+            ps.setString(7,q.getExamId());
+            ps.setInt(8,q.getQno());
+            
+            ps.executeUpdate();
+        }
+    }
+    
 }

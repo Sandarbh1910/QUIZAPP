@@ -289,8 +289,9 @@ public class LoginFrame extends javax.swing.JFrame {
         {
             DBConnection.closeConnection();
             JOptionPane.showMessageDialog(null,"THANK YOU!! ","HAVE A GOOD DAY :)",JOptionPane.INFORMATION_MESSAGE);
+             System.exit(0);
         }
-        System.exit(0);
+       
         
     }//GEN-LAST:event_btnQuitActionPerformed
 

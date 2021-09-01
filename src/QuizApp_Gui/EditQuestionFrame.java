@@ -514,6 +514,22 @@ public class EditQuestionFrame extends javax.swing.JFrame {
 
     private void btnDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoneActionPerformed
         // TODO add your handling code here:
+         if(!validateInput()){
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!","Error!",JOptionPane.ERROR_MESSAGE);
+            return;
+        }        
+        try{            
+            QuestionDAO.updateQuestions(qstore);
+            System.out.println(qstore);
+            JOptionPane.showMessageDialog(null,"Your questions have been successfully updated to the database!","Exam Updated!",JOptionPane.INFORMATION_MESSAGE);
+            AdminOptionFrame adminFrame=new AdminOptionFrame();
+            adminFrame.setVisible(true);
+            this.dispose();
+        }
+        catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, "DB Error!", "Edit Questions Error!", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        }
         
         
     }//GEN-LAST:event_btnDoneActionPerformed
