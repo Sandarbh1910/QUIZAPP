@@ -280,7 +280,7 @@ public class AdminOptionFrame extends javax.swing.JFrame {
         }
          else  if(rbViewScores.isSelected())
         {
-            ViewScoreFrame viewScore=new ViewScoreFrame();
+            ViewAllStudentsScoreFrame viewScore=new ViewAllStudentsScoreFrame();
             viewScore.setVisible(true);
            
         }

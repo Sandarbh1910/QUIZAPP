@@ -9,10 +9,14 @@ package QuizApp_Pojo;
  *
  * @author Sandarbh Taran
  */
-public class Performance {
+public class Performance implements Comparable {
      private String examId;
     private String subject;
     private String userId;
+    private int right;
+    private int wrong;
+    private int unattempted;
+    private double percent;
 
     public Performance(String examId, String subject, String userId, int right, int wrong, int unattempted, double percent) {
         this.examId = examId;
@@ -23,10 +27,7 @@ public class Performance {
         this.unattempted = unattempted;
         this.percent = percent;
     }
-    private int right;
-    private int wrong;
-    private int unattempted;
-    private double percent;
+    
    
 
    
@@ -87,5 +88,64 @@ public class Performance {
         this.userId = userId;
     }
     
+     @Override
+    public int compareTo(Object p)
+    {
+        Performance perf=(Performance)p;
+        if(perf.getPercent()==this.getPercent())
+        {
+            if(perf.getExamId().compareTo(this.getExamId())==0)
+            {
+                return 0;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())<0)
+            {
+                return 1;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())>0)
+            {
+                return -1;
+            }
+            
+        }
+        
+        else if(perf.getPercent()<this.getPercent())
+        {
+             if(perf.getExamId().compareTo(this.getExamId())==0)
+            {
+                return 0;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())<0)
+            {
+                return 1;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())>0)
+            {
+                return -1;
+            }
+        }
+        else if(perf.getPercent()>this.getPercent())
+        {
+             if(perf.getExamId().compareTo(this.getExamId())==0)
+            {
+                return 0;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())<0)
+            {
+                return 1;
+            }
+            
+            else if(perf.getExamId().compareTo(this.getExamId())>0)
+            {
+                return -1;
+            }
+        }
+        return 0;
+    }
     
 }

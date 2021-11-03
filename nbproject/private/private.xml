@@ -2,26 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/ViewAllStudentsScoreFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/SplashScreenFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/StudentOptionFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/RegisterUserFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/StudentsIndividualAllScoreFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/EditPaperFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/PaperSelectionFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/SetQuestionFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/TakeTestFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/ChangePasswordFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Pojo/Question.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_DAO/QuestionDAO.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/LoginFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_dbutil/DBConnection.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/StudentsPasswordFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/AdminViewIndividualScoreFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/SetPaperFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/EditQuestionFrame.java</file>
-            <file>file:/E:/Projects/QUIZAPP/src/QuizApp_Gui/StudentsIndividualScoreFrame.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

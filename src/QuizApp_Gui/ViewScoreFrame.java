@@ -241,15 +241,7 @@ public class ViewScoreFrame extends javax.swing.JFrame {
         
         if(rbViewIndividualScore.isSelected()==true)
         {
-            
-            if(UserProfile.getUserType().equalsIgnoreCase("ADMIN")==true)
-        {
-            AdminViewIndividualScoreFrame viewIndividualScore=new AdminViewIndividualScoreFrame();
-            viewIndividualScore.setVisible(true);
-            this.dispose();
-        }
-            
-            else if(UserProfile.getUserType().equalsIgnoreCase("STUDENT")==true)
+             if(UserProfile.getUserType().equalsIgnoreCase("STUDENT")==true)
             {
                 StudentsIndividualScoreFrame studentIndividualScore=new StudentsIndividualScoreFrame();
             studentIndividualScore.setVisible(true);

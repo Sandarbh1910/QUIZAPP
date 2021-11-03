@@ -28,6 +28,7 @@ public class EditPaperFrame extends javax.swing.JFrame {
         initComponents();
          lblDisplayUsername.setText("HELLO "+UserProfile.getUsername());
          oldcolor=lblLogout.getForeground();
+         setLocationRelativeTo(null);
           this.setTitle("QUIZAPP");
     }
 

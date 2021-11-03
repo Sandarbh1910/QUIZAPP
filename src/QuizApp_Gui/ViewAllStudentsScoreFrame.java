@@ -11,6 +11,7 @@ import QuizApp_Pojo.UserProfile;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Sandarbh Taran
  */
-public class ViewAllStudentsScoreFrame extends javax.swing.JFrame {
+public class ViewAllStudentsScoreFrame extends javax.swing.JFrame  {
 
     /**
      * Creates new form ViewAllStudentsScoreFrame
@@ -274,6 +275,7 @@ public class ViewAllStudentsScoreFrame extends javax.swing.JFrame {
             }
             DefaultTableModel model=(DefaultTableModel)tblViewAllScores.getModel();
             Object[]row=new Object[7];
+            Collections.sort(perf);
             for(Performance p:perf)
             {
                 row[0]=p.getUserId();
@@ -293,4 +295,7 @@ public class ViewAllStudentsScoreFrame extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }
+    
+    
+   
 }

@@ -42,9 +42,7 @@ public class StudentsPasswordFrame extends javax.swing.JFrame {
         lblChangePasswordFrame = new javax.swing.JLabel();
         lblLogout = new javax.swing.JLabel();
         LoginInnerPanel = new javax.swing.JPanel();
-        lblUsername = new javax.swing.JLabel();
         lblNewPassword = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
         txtNewPassword = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
         btnChangePassword = new javax.swing.JButton();
@@ -84,18 +82,10 @@ public class StudentsPasswordFrame extends javax.swing.JFrame {
         LoginInnerPanel.setBackground(new java.awt.Color(0, 0, 0));
         LoginInnerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Enter Credentials", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Cambria", 3, 36), new java.awt.Color(0, 102, 102))); // NOI18N
 
-        lblUsername.setBackground(new java.awt.Color(0, 255, 204));
-        lblUsername.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(255, 153, 51));
-        lblUsername.setText("USERNAME");
-
         lblNewPassword.setBackground(new java.awt.Color(0, 255, 204));
         lblNewPassword.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         lblNewPassword.setForeground(new java.awt.Color(255, 153, 51));
         lblNewPassword.setText("NEW PASSWORD");
-
-        txtUsername.setBackground(new java.awt.Color(204, 204, 204));
-        txtUsername.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
 
         txtNewPassword.setBackground(new java.awt.Color(204, 204, 204));
         txtNewPassword.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
@@ -153,11 +143,9 @@ public class StudentsPasswordFrame extends javax.swing.JFrame {
                             .addComponent(lblRetypePassword)
                             .addGroup(LoginInnerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(lblCurrentPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblNewPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(lblNewPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(LoginInnerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUsername)
                             .addComponent(txtNewPassword)
                             .addComponent(txtRetypePassword, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
                             .addComponent(txtCurrentPassword))
@@ -166,11 +154,7 @@ public class StudentsPasswordFrame extends javax.swing.JFrame {
         LoginInnerPanelLayout.setVerticalGroup(
             LoginInnerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginInnerPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(LoginInnerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addGroup(LoginInnerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblCurrentPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtCurrentPassword))
@@ -282,20 +266,20 @@ Color oldcolor;
         this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
-     private String username;
-    private String password;
+    
+    private String newpassword;
     private String retype;
     private String currentPassword;
     
     private boolean validateInput()
 {
     char[] pwd=txtCurrentPassword.getPassword();
-    username=txtUsername.getText();
-    password=txtNewPassword.getText();
+    //username=txtUsername.getText();
+    newpassword=txtNewPassword.getText();
     retype=txtRetypePassword.getText();
     
     
-    if(username.isEmpty()||password.isEmpty()||retype.isEmpty()||pwd.length==0)
+    if(newpassword.isEmpty()||retype.isEmpty()||pwd.length==0)
     {return false;}
     currentPassword=String.valueOf(pwd);
     return true;
@@ -315,11 +299,11 @@ Color oldcolor;
             return;
         }
         
-        if(retype.equals(password)==false)
+        if(retype.equals(newpassword)==false)
         {JOptionPane.showMessageDialog(null,"Passwords does not match","!Error",JOptionPane.ERROR_MESSAGE);
             return;}
 
-        User user=new User(username,password,userType);
+        User user=new User(UserProfile.getUsername(),newpassword,userType);
         try{
             boolean isValidUser=UserDAO.changeStudentsPassword(user,currentPassword);
             if(isValidUser)
@@ -388,11 +372,9 @@ Color oldcolor;
     private javax.swing.JLabel lblLogout;
     private javax.swing.JLabel lblNewPassword;
     private javax.swing.JLabel lblRetypePassword;
-    private javax.swing.JLabel lblUsername;
     private javax.swing.JPanel pnlStudentsPasswordFrame;
     private javax.swing.JPasswordField txtCurrentPassword;
     private javax.swing.JTextField txtNewPassword;
     private javax.swing.JTextField txtRetypePassword;
-    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
