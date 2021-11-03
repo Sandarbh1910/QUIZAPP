@@ -213,8 +213,8 @@ public class ViewAllStudentsScoreFrame extends javax.swing.JFrame  {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         
-         ViewScoreFrame viewScore=new ViewScoreFrame();
-       viewScore.setVisible(true);
+         AdminOptionFrame adminFrame=new AdminOptionFrame();
+       adminFrame.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
